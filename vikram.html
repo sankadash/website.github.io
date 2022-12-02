@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+            background-color: #C0CFFF;
+            overflow-x: hidden;
+        }
+        .topbar
+        {
+
+            background-color: #3700B3;
+            padding: 17px;
+            position: fixed;
+            width: 100%;
+            height: 20x;
+            margin-top: -10px;
+            margin-left: -20px;
+            text-align: 10px;
+            opacity: 1;
+            z-index: 100;
+            /* float: top; */
+            /* margin-block-start: 0; */
+        }
+        
+        .searchbar
+        {
+            position: fixed;
+            margin-left: 5px;
+            width: 586px;
+            height: 45px;
+            left: 30%;
+            top: 1.4%;
+            background:solid  #231F3D;
+            border-radius: 25px;
+            /* text-align: ; */
+            line-height: 45px;
+            justify-content: center;
+            z-index: 100;
+            
+
+        }
+            input[type=text] 
+            {
+                position: fixed;
+                left: 30%;
+                top: 0.8%;
+                width: 39%;
+                height: 30px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-radius: 14px;
+                background-color: rgba(38, 16, 90, 0.7);
+                z-index: 100;
+            }
+
+            ::placeholder
+            {
+                color: white;
+            }
+
+        .signin
+        {
+            position: fixed;
+            width: 7%;
+            height: 5%;
+            top: 1.6%;
+            right: 2%;
+            text-align: center;
+            line-height: 30px;
+            background: rgba(88, 112, 203, 1);
+            border: 2px solid rgb(40, 35, 112);
+            z-index: 100;
+            /* border-color: ; */
+            border-radius: 15px;
+            transition: 500ms;
+        }
+
+        .signin:hover[class="signin"]
+        {
+            background-color: antiquewhite;
+        }
+
+        a[id="header"]{
+            text-decoration: none;
+            color: white;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: -4px;
+            transition: 700ms;
+            z-index: 100;
+        }
+
+        a:hover[id="header"]{
+            
+            /* border: 3px;
+            border-color: antiquewhite; */
+            /* border-radius: 15px; */
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            color: black;
+        }
+        /* .specificbar:hover[class="specificbar"]
+        {
+            width: 50%;
+        }
+        .specificbar:hover p{
+            opacity:1;
+        }
+
+        .specificbar:hover
+        {
+            width: 50%;
+        } */
+        .smartphones:hover p{
+            opacity:1;
+            z-index: 3;
+        }
+        .smartphones:hover
+        {
+            z-index: 3;
+            width: 300px;
+        }
+        .laptops:hover
+        {
+            z-index: 3;
+            width: 300px;
+        }
+        .laptops:hover p{
+            overflow: visible;
+            opacity: 1;
+            z-index: 3;
+        }
+        .homeappliances:hover
+        {
+            width: 300px;
+            overflow: visible;
+            z-index: 3;
+        }
+        .homeappliances:hover p{
+            overflow: visible;
+            opacity: 1;
+            z-index: 3;
+        }
+        .tvs:hover
+        {
+            width: 300px;
+            z-index: 3;
+        }
+        .tvs:hover p{
+            overflow: visible;
+            opacity: 1;
+            z-index: 3;
+        }
+        .camera:hover
+        {
+            width: 300px;
+            z-index: 3;
+        }
+        .camera:hover p{
+            overflow: visible;
+            opacity: 1;
+            z-index: 3;
+        }
+        li
+        {
+            display: inline-block;
+        }
+        .sidebarelec
+        {
+            position: absolute;
+            width: 100px;
+            height: 460px;
+            left: 7px;
+            top: 125px;
+            background: rgba(141, 165, 255, 0.39);
+            box-shadow: 4px 6px 6px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+        }
+
+        .smartphones
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 15px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            /* or 86% */
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    .smartphones p{
+        padding-left: 110px;
+        position: absolute;
+        left:-15px;
+        opacity: 0;
+        transition: all 2s;
+        z-index: 0;
+        text-align: center;
+    }
+        .laptops
+        {
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            position: absolute;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+
+            top: 105px;
+        }
+        .laptops img
+        {
+
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .laptops p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+        left:-15px;
+        }
+
+        .homeappliances
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 195px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .homeappliances img{
+            width: 70px;
+            height: 80px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: -2px;
+        }
+        .homeappliances p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+            left: -15px;
+        }
+
+        .tvs
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 285px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .tvs img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .tvs p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+            left: -15px;
+        }
+        .camera
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 375px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .camera img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .camera p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+            left: -15px;
+        }
+
+        .specificbar
+        {
+            margin-top: 11px;
+            margin-left: -10px;
+            padding-left: 0px;
+            height: 55px;
+            width: 101%;
+            background-color: #8C9EFF ;
+            border-radius: 10px;
+            transition:700ms;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .specificbar img{
+            width: 114px;
+            height: 54px;
+            /* border: black solid 2px; */
+            justify-content: left;
+            align-items: center;
+            margin-left: -8px;
+        }
+        .specificbar p{
+            padding-left: 70px;
+            /* transition: all 2s; */
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .imagebanner
+        {
+            position: relative;
+            top: 20%;
+            /* margin-top: -45px; */
+            left: 10%;
+            width: 88%;
+            height: 340px;
+            border:  2px;   
+            transition-duration: 1000ms;
+            transition-delay: 100ms;
+            background-color: #989898;
+            /* border: solid black 2px; */
+        
+        }
+
+        .imagebanner:hover
+        {
+            box-shadow: 4px 6px 6px 6px rgba(0, 0, 0, 0.25);
+            padding: 2px;
+            /* background-color: #224157; */
+            border-radius: 10px;
+            z-index: 0;
+
+        }
+
+        .imagebanner img
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border:0px;
+            /* height: 100%; */
+            
+            /* border: solid black 2px; */
+            
+            border-radius: 10px;
+        }
+        /* #wrapper 
+        {
+
+            
+        } */
+
+
+
+        .images
+        {
+            position: absolute;
+            overflow: auto;
+            margin-top: 80px;
+            margin-left: 150px;   
+            transition-duration: 1000ms;
+            transition-delay: 100ms;
+            border: 0px;
+            /* background-color: #989898; */
+        }
+        #img1
+        {
+            position: absolute;
+            border: 0px;
+            /* overflow: auto; */
+            margin-top: 80px;
+            margin-left: 150px;
+            
+            
+        }
+        #img2 
+        {
+            position: absolute;
+            border: 0px;
+            overflow: auto;
+            margin-top: 80px;
+            margin-left: 450px;
+        }
+        #img3
+        {
+            position: absolute;
+            overflow: auto;
+            margin-top: 80px;
+            margin-left: 720px;
+        }
+        #img4
+        {
+            position: absolute;
+            overflow: auto;
+            margin-top: 80px;
+            margin-left: 990px;
+        }
+        .footer{
+            position:absolute;
+            top:175%;
+            left:-1px;
+            height: 50vh;
+            width: 100%;
+            background-color: #160625;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottombar1{
+            width: 160px;
+            height: 150px;
+            color:white;
+            margin-right: 150px;
+            margin-left: 80px;
+        }
+        .bottombar1 ul li{
+            margin-bottom: 20px;
+        }
+        .bottombar2{
+            width:350px;
+            height: 150px;
+            color:white;
+            margin-right: 150px;
+        }
+        .bottombar2 ul li{
+            margin-bottom: 20px;
+        }
+        .bottombar3{
+            width:300px;
+            height: 150px;
+            margin-right: 150px;
+            padding: 0;
+            color:white;
+        }
+        .bottombar3 ul li{
+            margin-bottom: 20px;
+        }
+        /* .bottombar4{
+            margin-top: 60px;
+            width:300px;
+            height: 220px;
+            margin-right: 150px;
+            padding: 0;
+            color: white;
+        } */
+
+        #img1:hover
+        {
+            box-shadow: 4px 6px 6px 6px rgba(0, 0, 0, 0.25);
+            /* padding: 2px; */
+            /* background-color: #224157; */
+            border-radius: 10px;
+            z-index: 0;
+
+        }
+        #img2:hover
+        {
+            box-shadow: 4px 6px 6px 6px rgba(0, 0, 0, 0.25);
+            padding: none;
+            /* background-color: #224157; */
+            border-radius: 10px;
+            z-index: 0;
+
+        }
+        #img3:hover
+        {
+            box-shadow: 4px 6px 6px 6px rgba(0, 0, 0, 0.25);
+            /* padding: 2px; */
+            /* background-color: #224157; */
+            border-radius: 10px;
+            z-index: 0;
+
+        }
+        #img4:hover
+        {
+            box-shadow: 4px 6px 6px 6px rgba(0, 0, 0, 0.25);
+            /* padding: 2px; */
+            /* background-color: #224157; */
+            border-radius: 10px;
+            z-index: 0;
+
+        }
+
+    </style>
+</head>
+<header>
+
+</header>
+<body>
+    <div class="topbar" >
+        <a id="header"> MaViS </a>
+    </div>
+
+    <!-- <form>
+    <input type="text" placeholder="Search....">
+    </form> -->
+    <input type="text" placeholder="Search...">
+    <div class="signin"><a>Sign In</a></div>
+    <!-- <div class="maindoc"> -->
+        <br>
+        <br>
+    </div>
+    <div class="specificbar"><img src="/Multiple Devices.png"><p>Electronics</p></div>
+    <div class="sidebarelec">
+        <div class="smartphones"><img src="/Smartphone Tablet.png">
+            <p>Smartphones
+            </p>
+            </div>
+        <div class="laptops"><img src="/desktop_light@2x.png"><p>Computers</p></div>
+        <div class="homeappliances"><img src="/Fridge.png"><p>Home Appliances</p></div>
+        <div class="tvs"><img src="/TV.png"><p>Televisions</p></div>
+        <div class="camera"><img src="/SLR Camera.png"><p>Cameras</p></div>
+    </div>
+    <div class="imagebanner"><img src="/image 8.png"></div>
+    
+    <div class="bottomimages" id="wrapper"> 
+        <img class="images" src="/image 9.png" id="img1">
+        <img class="images" src="/image 10.png" id="img2">
+        <img class="images" src="/image 11.png" id="img3">
+        <img class="images" src="/image 12.png" id="img4">
+
+    </div>   
+    <div class="footer">
+        <div class="bottombar1">
+            <ul>
+                <li>Get to Know Us</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Press Releases</li>
+                <li>Gift a Smile</li>
+            </ul>
+        </div>
+        <div class="bottombar2">
+            <ul>
+            <li>Connect with us</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>E-mail:xxyyzz@xyz.org</li>
+            </ul>
+        </div>
+        <div class="bottombar3"><ul>
+            <li>Let us help you</li>
+            <li>COVID-19 and MaViS</li>
+            <li>Your Account</li>
+            <li>Returns Center</li>
+            <li>100% Purchase protection</li>
+            </ul></div>
+        <!-- <div class="bottombar4"><ul>
+            <li>BMU sales Private Limited,</li>
+            <li>Binola Industrial Area,</li>
+            <li>BMU premises Old Tower Hostel,</li>
+            <li>Kapriwas, Haryana , 122413,</li>
+            <li>India</li>
+            </ul></div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: #ebeffc; */
+    
+}
+.cntr{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.topbar
+        {
+           
+           float: left;
+
+        }
+nav{float: right;}       
+
+
+
+
+        .cart
+        {
+            position: fixed;
+            right: 12%;
+            top: 1.6%;
+            
+        }
+
+        .notification
+        {
+            position: fixed;
+            right: 16%;
+            top: 1.6%;
+        }
+.searchbar
+{
+    position: fixed;
+    margin-left: 5px;
+    width: 586px;
+    height: 45px;
+    left: 30%;
+    top: 1.4%;
+    background: rgba(35, 31, 61, 0.78);
+    border-radius: 25px;
+    /* text-align: ; */
+    line-height: 45px;
+    justify-content: center;
+    
+
+}
+    input[type=text] 
+    {
+        position: fixed;
+        left: 30%;
+        top: 0.8%;
+        width: 39%;
+        height: 30px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 14px;
+        background-color: rgba(38, 16, 90, 0.7);
+    }
+
+    ::placeholder
+    {
+        color: white;
+    }
+
+.signin
+{
+    position: fixed;
+    width: 7%;
+    height: 4%;
+    top: 1.6%;
+    right: 2%;
+    text-align: center;
+    line-height: 30px;
+    background: rgba(88, 112, 203, 1);
+    border: 2px solid rgb(40, 35, 112);
+    /* border-color: ; */
+    border-radius: 15px;
+    transition: 100ms;
+}
+
+.signin:hover[class="signin"]
+{
+    background-color: antiquewhite;
+    padding :-2px;
+}
+
+a[id="header"]{
+    text-decoration: none;
+    color: white;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: 700ms;
+    
+}
+
+a:hover[id="header"]{
+    
+    
+    box-sizing: border-box;
+    padding:2px;
+    background-color: rgb(90, 144, 224);
+    color: black;
+}
+
+        .specificbar
+        {
+            margin-top: 11px;
+            margin-left: -7px;
+            padding-left: 0px;
+            height: 65px;
+            width: 100px;
+            background-color: #8C9EFF ;
+            border-radius: 7px;
+            transition:700ms;
+        }
+
+        .sidebarelec
+        {
+            position: absolute;
+            width: 100px;
+            height: 460px;
+            left: 0px;
+            top: 125px;
+            background: rgba(141, 165, 255, 0.39);
+            box-shadow: 4px 6px 6px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+        }
+
+        .furniture
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 15px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            /* or 86% */
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    .furniture p{
+        padding-left: 110px;
+        opacity: 0;
+        transition: all 2s;
+    }
+        .Electronics
+        {
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            position: absolute;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+
+            top: 105px;
+        }
+        .Electronics img
+        {
+
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .Electronics p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .fashion
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 195px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .fashion img{
+            width: 70px;
+            height: 80px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: -2px;
+        }
+        .fashion p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .grocery
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 285px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .grocery img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .grocery p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .kids
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 375px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .kids img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .kids p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+
+
+        img{
+            position: fixed;
+        }
+        .specificbar:hover[class="specificbar"]
+        {
+            background-color: aqua;
+        }
+        .furniture:hover
+        {
+            width: 300px;
+        }
+        .furniture:hover p{
+            opacity:1;
+        }
+        .Electronics:hover
+        {
+            
+            width: 300px;
+        }
+        .Electronics:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .fashion:hover
+        {
+            width: 300px;
+            overflow: visible;
+        }
+        .fashion:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .grocery:hover
+        {
+            width: 300px;
+        }
+        .grocery:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .kids:hover
+        {
+            width: 300px;
+        }
+        .kids:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        li
+        {
+            display: inline-block;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .trending
+        {
+            position: absolute;
+            top: 59%;
+            left: 10%;
+            width: 150px;
+            /* transition-duration: 210ms; */
+            font-size: 20px;
+            border: solid black 2px;
+            
+
+        }
+
+    .container{
+        max-width: 1170px;
+        margin:auto;
+    }
+    .row{
+        display: flex;
+        align-self: center;
+    }
+    .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+        margin-top:80%;
+        border: solid pink 2px;
+        
+    }
+    .footer-col{
+       
+       display: flex;
+        justify-content: center;
+        padding-left: 10px;
+        justify-content: space-between;
+        border: blue 2px solid;
+        width: 100%;
+        background-color: #24262b;
+    
+        align-items: center;
+        flex-direction:row ;
+    
+    
+    }
+    
+    .c1{
+        /* border: blue 2px solid; */
+        background-color: #24262b;
+        margin-top: 2px;
+        
+    }
+    .c4{background-color: #24262b;
+        margin-top: 2px;
+    
+    }
+    .c4 h4{
+        padding-left: 60px;
+    }
+    .c2{margin-top: 2px;
+        /* border: solid blue 2px; */
+
+    }
+    .social-links{
+        background-color: #24262b;
+        /* border: blue 2px solid; */
+    }
+    
+    .footer-col ul li a{
+        font-size: 16px;
+        background-color: #24262b;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        /* border: blue solid 2px; */
+    }
+    
+    .footer-col .social-links a:hover{
+        color: #24262b;
+        background-color: #ffffff;
+    }
+    .c4{
+        
+        color: white;
+        background-color: #24262b;
+    }
+    
+    
+    
+    
+
+
+
+
+
+
+

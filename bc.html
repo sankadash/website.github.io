@@ -1,0 +1,398 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+        {
+            background-color: #C0CFFF;
+        }
+        ul
+        {
+            list-style-type:none ;
+            background: rgba(55, 0, 179, 0.62);
+            padding: 17px;
+            position: fixed;
+            width: 100%;
+            margin-top: -10px;
+            margin-left: -20px;
+            text-align: 10px;
+            /* float: top; */
+            /* margin-block-start: 0; */
+        }
+        
+        .searchbar
+        {
+            position: fixed;
+            margin-left: 5px;
+            width: 586px;
+            height: 45px;
+            left: 30%;
+            top: 1.4%;
+            background: rgba(35, 31, 61, 0.78);
+            border-radius: 25px;
+            /* text-align: ; */
+            line-height: 45px;
+            justify-content: center;
+            
+
+        }
+            input[type=text] 
+            {
+                position: fixed;
+                left: 30%;
+                top: 0.8%;
+                width: 39%;
+                height: 30px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-radius: 14px;
+                background-color: rgba(38, 16, 90, 0.7);
+            }
+
+            ::placeholder
+            {
+                color: white;
+            }
+
+        .signin
+        {
+            position: fixed;
+            width: 7%;
+            height: 5%;
+            top: 1.6%;
+            right: 2%;
+            text-align: center;
+            line-height: 30px;
+            background: rgba(88, 112, 203, 1);
+            border: 2px solid rgb(40, 35, 112);
+            /* border-color: ; */
+            border-radius: 15px;
+            transition: 500ms;
+        }
+
+        .signin:hover[class="signin"]
+        {
+            background-color: antiquewhite;
+        }
+
+        a[id="header"]{
+            text-decoration: none;
+            color: white;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: -4px;
+            transition: 700ms;
+            
+        }
+
+        a:hover[id="header"]{
+            
+            /* border: 3px;
+            border-color: antiquewhite; */
+            /* border-radius: 15px; */
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            color: black;
+        }
+        .specificbar:hover[class="specificbar"]
+        {
+            background-color: aqua;
+        }
+        .smartphones:hover
+        {
+            width: 300px;
+        }
+        .smartphones:hover p{
+            opacity:1;
+        }
+        .laptops:hover
+        {
+            
+            width: 300px;
+        }
+        .laptops:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .homeappliances:hover
+        {
+            width: 300px;
+            overflow: visible;
+        }
+        .homeappliances:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .tvs:hover
+        {
+            width: 300px;
+        }
+        .tvs:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        .camera:hover
+        {
+            width: 300px;
+        }
+        .camera:hover p{
+            overflow: visible;
+            opacity: 1;
+        }
+        li
+        {
+            display: inline-block;
+        }
+
+        .specificbar
+        {
+            margin-top: 11px;
+            margin-left: -7px;
+            padding-left: 0px;
+            height: 65px;
+            width: 100px;
+            background-color: #8C9EFF ;
+            border-radius: 7px;
+            transition:700ms;
+        }
+
+        .sidebarelec
+        {
+            position: absolute;
+            width: 100px;
+            height: 460px;
+            left: 0px;
+            top: 125px;
+            background: rgba(141, 165, 255, 0.39);
+            box-shadow: 4px 6px 6px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;
+        }
+
+        .smartphones
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 15px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            /* or 86% */
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+    .smartphones p{
+        padding-left: 110px;
+        opacity: 0;
+        transition: all 2s;
+    }
+        .laptops
+        {
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            position: absolute;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+
+            top: 105px;
+        }
+        .laptops img
+        {
+
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .laptops p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .homeappliances
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 195px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .homeappliances img{
+            width: 70px;
+            height: 80px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: -2px;
+        }
+        .homeappliances p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        .tvs
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 285px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .tvs img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .tvs p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .camera
+        {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            left: 13px;
+            top: 375px;
+            background: rgba(255, 255, 255);
+            box-shadow: 4px 6px 6px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            transition:width 1s;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .camera img{
+            width: 75px;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 1px;
+        }
+        .camera p{
+            padding-left: 110px;
+            opacity:0;
+            transition: all 2s;
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+
+
+        img{
+            position: fixed;
+        }
+
+
+    
+    </style>
+</head>
+<header>
+
+</header>
+<body>
+    <ul>
+    <li>
+        <a id="header"> MaViS </a>
+
+    </li>
+    </ul>
+    <!-- <form>
+    <input type="text" placeholder="Search....">
+    </form> -->
+    <input type="text" placeholder="Search...">
+    <div class="signin"><a>Sign In</a></div>
+    <!-- <div class="maindoc"> -->
+        <br>
+        <br>
+    </div>
+    <div class="specificbar"><img src="/Multiple Devices.png"><p>Electronics</p></div>
+    <div class="sidebarelec">
+        <div class="smartphones"><img src="/Smartphone Tablet.png">
+            <p>Smartphones
+            </p>
+            </div>
+        <div class="laptops"><img src="/desktop_light@2x.png"><p>Computers</p></div>
+        <div class="homeappliances"><img src="/Fridge.png"><p>Home Appliances</p></div>
+        <div class="tvs"><img src="/TV.png"><p>Televisions</p></div>
+        <div class="camera"><img src="/SLR Camera.png"><p>Cameras</p></div>
+    <!-- </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eligendi fuga adipisci necessitatibus quod voluptate commodi, expedita nam repellendus in, magni eius corporis labore omnis quis. Placeat et nemo consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, impedit voluptatum aliquid quisquam ipsam commodi maiores earum, laborum dolorum ex suscipit ut, quibusdam incidunt illum quam quos porro vero perspiciatis!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus obcaecati ea id sequi quis labore ex consectetur velit neque aliquid, excepturi dolorem, iste incidunt et voluptatum totam voluptate fuga corporis?
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p> -->
+</body>
+</html>
